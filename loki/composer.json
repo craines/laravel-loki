@@ -1,0 +1,29 @@
+{
+    "name": "williamtome/loki",
+    "description": "A package for send application logs to Grafana Loki.",
+    "authors": [
+        {
+            "name": "William W. Tomé",
+            "email": "william.tomenh@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Williamtome\\Loki\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "^2.3.5",
+        "guzzlehttp/guzzle": "^7.4.1",
+        "illuminate/support": "^8.83.3",
+        "illuminate/translation": "^8.83.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Williamtome\\Loki\\LokiServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT"
+}
