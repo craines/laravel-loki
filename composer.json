@@ -15,8 +15,8 @@
     "require": {
         "monolog/monolog": "^2.3.5",
         "guzzlehttp/guzzle": "^7.4.1",
-        "illuminate/support": "^8.83.3",
-        "illuminate/translation": "^8.83.3"
+        "illuminate/support": "^8.83.3 || ^9.0 || ^10.0 || ^11.0",
+        "illuminate/translation": "^8.83.3 || ^9.0 || ^10.0 || ^11.0"
     },
     "extra": {
         "laravel": {
