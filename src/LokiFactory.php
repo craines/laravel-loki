@@ -15,6 +15,8 @@ class LokiFactory
                 new WhatFailureGroupHandler([
                     (new LokiHandler(
                         $config['configApi']['entrypoint'],
+                        $config['configApi']['username'],
+                        $config['configApi']['password'],
                         $config['level']
                     ))->setFormatter(new LokiFormatter($config['configApi']['globalLabels']))
                 ])

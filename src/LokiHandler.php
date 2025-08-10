@@ -15,6 +15,8 @@ class LokiHandler extends AbstractProcessingHandler
 {
     public function __construct(
         protected string $entrypoint,
+        protected string $username = '',
+        protected string $password = '',
         $level = Logger::DEBUG,
         $buble = true
     ) {
@@ -24,6 +26,7 @@ class LokiHandler extends AbstractProcessingHandler
     protected function write(LogRecord|array $record): void
     {
         $httpClient = new Client([
+            'auth' => [$this->username, $this->password],
             'headers' => [
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/json'
